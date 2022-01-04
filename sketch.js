@@ -27,7 +27,7 @@ function setup() {
   ball = Bodies.circle(50,200,20);
   World.add(world,ball);
 //challenge 2
-  slingShot = new Slingshot();
+  slingShot = new Slingshot(ball,{x:30,y:20});
 
 }
 function draw() {
@@ -47,7 +47,7 @@ function draw() {
   slingShot.display();
 }
 function mouseDragged(){
-  Matter.Body.setPosition();
+  Matter.Body.setPosition(ball,{x:mouseX,y:mouseY});
 }
 function mouseReleased(){
   slingShot.fly();
