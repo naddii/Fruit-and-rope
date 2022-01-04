@@ -24,7 +24,7 @@ function setup() {
  
 
   //Challenge1:
-  ball = Bodies.(50,200,20);
+  ball = Bodies.circle(50,200,20);
   World.add(world,ball);
 //challenge 2
   slingShot = new Slingshot();
